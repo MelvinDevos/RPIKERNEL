@@ -1,0 +1,1 @@
+cmd_/home/pi/embedded/RPIKERNEL/Module.symvers := sed 's/ko$$/o/' /home/pi/embedded/RPIKERNEL/modules.order | scripts/mod/modpost -m -a   -o /home/pi/embedded/RPIKERNEL/Module.symvers -e -i Module.symvers   -T -
