@@ -81,9 +81,13 @@ MODULE_PARM_DESC(toggle_array, "An array of integers");
 static int __init gpio_blink_init(void)
 {
     int i;
+    int ret;
 
-    int speed1 = toggle_array[1] * 100;
-    int speed2 = toggle_array[2] * 100;
+    ret = gpio_request_array(gpio_output, ARRAY_SIZE(gpio_output));
+    if (ret)
+    {
+        printk(KERN_ERR "Unable to request GPIOs: %d\n", ret);
+    }
 
     printk(KERN_INFO " %d argumenten.\n", arr_argc);
     for (i = 0; i < arr_argc; i++)

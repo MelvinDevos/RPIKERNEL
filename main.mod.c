@@ -32,6 +32,7 @@ __used __section("__versions") = {
 	{ 0x223fc350, "kthread_stop" },
 	{ 0x977035dc, "wake_up_process" },
 	{ 0x31556c9c, "kthread_create_on_node" },
+	{ 0x8574ca6c, "gpio_request_array" },
 	{ 0xba4c293, "gpiod_set_raw_value" },
 	{ 0x8f411754, "gpiod_get_raw_value" },
 	{ 0xe30324cf, "gpio_to_desc" },
@@ -44,4 +45,4 @@ __used __section("__versions") = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "AA2C38AB921D133800F2D16");
+MODULE_INFO(srcversion, "2BD2010E9197ACA8DB09FC8");
